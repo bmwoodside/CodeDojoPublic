@@ -1,2 +1,2 @@
 # CodeDojo
-Overarching repository for Code Dojo Bootcamp
+Public repository for Code Dojo Bootcamp

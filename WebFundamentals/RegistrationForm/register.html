@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    
+    <h1>Registration Form</h1>
+    <form>
+    <p>First Name: * <input type="text" placeholder="John" required></p>
+    <p>Last Name: * <input type="text" placeholder="Doe" required></p>
+    <p>Email Address: * <input type="email" placeholder="someone@somewhere.com" required> </p>
+    <p>Password: * <input type="password" required> </p>
+    <p>Confirm Password: * <input type="password" required> </p>
+    <p>Birthday: <input type="date" placeholder="mm/dd/yyyy"> </p>
+    
+    <div class="gender">Gender Identity: <br>
+        <input type="radio" id="male" name="gender_select" value="Male">
+        <label for="male">Male</label>
+        
+        <input type="radio" id="female" name="gender_select" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="nonbinary" name="gender_select" value="Non-binary">
+        <label for="nonbinary">Non-binary</label>
+
+        <input type="radio" id="noAnswer" name="gender_select" value="noAnswer">
+        <label for="noAnswer">I prefer not to answer</label>
+    </div>
+
+    <p><label for="userDescription">A short description about myself: </label> <br>
+    <textarea id="userDescription" name="userDescription" rows="6" cols="40"></textarea></p>
+
+    <p><label for="favoriteLanguage">Favorite Language: </label>
+    <select name="favoriteLanguage" id="favoriteLanguage">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="cSharp">C#</option>
+    </select></p>
+
+    <p><input type="checkbox" id="subscribeCheckbox">
+    <label for="subscribeCheckbox">Yes, I would like to receive periodic email updates</label></p>
+
+    <button type="submit">Create Account</button>
+
+    <p style="color: red;">* Indicates a required field.</p>
+
+    </form>
+
+</body>
+</html>

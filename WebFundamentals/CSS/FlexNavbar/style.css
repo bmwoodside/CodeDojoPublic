@@ -36,3 +36,34 @@ button {
     border: 2px solid black;
     box-shadow: 2px 2px black;
 }
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col  {
+    text-align: center;
+    margin: 5px;
+    padding: 14px;
+    background-color: teal;
+    flex: 1;
+}
+
+.col-2 {
+    text-align: center;
+    margin: 5px;
+    padding: 14px;
+    background-color: teal;
+    flex: 2;
+}
+
+.col-3 {
+    text-align: center;
+    margin: 5px;
+    padding: 14px;
+    background-color: teal;
+    flex: 3;
+}

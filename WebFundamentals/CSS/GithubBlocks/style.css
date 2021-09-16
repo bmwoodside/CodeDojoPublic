@@ -1,0 +1,44 @@
+.main {
+    width: 66%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211, 211, 211, 0.562);
+    border-top: 2px solid black;
+}
+
+h1 {
+    color: darkslategray;
+    text-align: center;
+}
+
+img.octocat {
+    height: 200px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 10px;
+}
+
+#content1 {
+    background-color: rgb(175, 204, 238);
+    justify-content: space-between;
+}
+
+#content2 {
+    background-color: palegoldenrod;
+    justify-content: space-evenly;
+}
+
+#content3 {
+    background-color: palegreen;
+    justify-content: space-between;
+}
+
+h5 {
+    text-align: center;
+    color: gray;
+}

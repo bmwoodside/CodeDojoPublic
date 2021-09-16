@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    text-decoration-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: teal;
+    padding: 2px 6px;
+    justify-content: center;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}

@@ -1,0 +1,61 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+    width: 600px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.portrait {
+    width: 100px;
+    margin: 20px;
+    position: absolute;
+    top: 110px;
+}
+
+.color {
+    background-color: teal;
+    height: 120px;
+    width: 600px;
+    border-radius: 5px;
+}
+
+.profile {
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.location {
+    align-items: center; /* this isn't actually doing anything */
+    justify-content: center; /* this isn't actually doing anything */
+    /* margin: 10px; */
+}
+
+.mapMarkerIcon {
+    height: 20px;
+    margin: 5px;
+}
+
+p {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.gearIcon {
+    height: 12px;
+    margin-right: 10px;
+}
+
+.profileLink {
+    display: flex;
+    margin-top: 5px;
+}

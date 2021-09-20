@@ -10,46 +10,49 @@
 <body>
     
 <div class="body">
-    
+
     <div class="nav-top">
         <h1>Dojonary</h1>
         <input type="text" placeholder="Search">
-        <button id="loginButton"></button>
+        <button id="loginButton" onclick="loginButton(this)">Login</button>
     </div>
+ 
+    <div class="main">
+        <div class="main-left">
 
-    <div class="main-left">
-
-        <div class="card-container">
-            <div class="card-left">
-                <h1>ninja</h1>
-                <h2>noun</h2>
-                <p>Plural: <span id="italics">ninjas</span></p>
-                <button class="likeButton"></button>
+            <div class="card-container">
+                <div class="card-left">
+                    <h1>ninja</h1>
+                    <h2 class="italics">noun</h2>
+                    <p>Plural: <span class="italics">ninjas</span></p>
+                    <button class="likeButton" onclick="alert('Ninja was liked')">13 likes</button>
+                </div>
+                <div class="card-body">
+                    <h3>A practicioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></h3>
+                </div>
             </div>
-            <div class="card-body">
-                <h3>A practicioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></h3>
+
+            <div class="card-container">
+                <div class="card-left">
+                    <h1>ninja</h1>
+                    <h2 class="italics">noun</h2>
+                    <p>Plural: <span class="italics">ninjas</span></p>
+                    <button class="likeButton" onclick="alert('Ninja was liked')">37 likes</button>
+                </div>
+                <div class="card-body">
+                    <h3>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-right">
+            <div class="col-right-card">
+                <h2>Dojonary is defined by <span id="bold">YOU</span></h2>
+                <button id="addButton" onclick="removeButton(this)">Add Definition</button>
             </div>
         </div>
 
-        <div class="card-container">
-            <div class="card-left">
-                <h1>ninja</h1>
-                <h2>noun</h2>
-                <p>Plural: <span id="italics">ninjas</span></p>
-                <button class="likeButton"></button>
-            </div>
-            <div class="card-body">
-                <h3>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</h3>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="main-right">
-        <div class="col-right-card">
-            <h2>Dojonary is defined by <span id="bold">YOU</span></h2>
-            <button class="addDefinition"></button>
-        </div>
     </div>
 
 </div>

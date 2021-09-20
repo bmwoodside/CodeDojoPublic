@@ -6,9 +6,10 @@
 #nav-top {
     display: flex;
     justify-content: space-around;
-    margin: 10px;
+    margin: auto;
     color: ghostwhite;
     background-color: black;
+    width: 900px;
 }
 
 #nav-top button {
@@ -34,6 +35,7 @@ li {
 .content {
     display: flex;
     margin: auto;
+    width: 900px;
 }
 
 .nav-left {
@@ -42,7 +44,7 @@ li {
     /* flex: 5; */
     align-items: flex-end;
     /* background-color: chocolate; */
-    margin-left: 300px;
+    /* margin-left: 300px; */
 }
 
 .profile-card {

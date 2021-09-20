@@ -10,3 +10,107 @@
     width: 1200px;
     margin: 0 auto;
 }
+
+.nav-top {
+    display: flex;
+    width: 600px;
+    background-color: lightslategray;
+    justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
+    margin: auto;
+}
+
+#loginButton {
+    color: white;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(95, 95, 247);
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 2px 2px black;
+}
+
+.main {
+    display: flex;
+    margin: auto;
+    width: 600px;
+}
+
+.main-left {
+    width: 400px;
+}
+
+.main-right {
+    width: 200px;
+    display: flex;
+}
+
+.card-container {
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 10px 10px 10px 0px;
+    display: flex;
+    height: 150px;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0px 10px;
+    flex: 2;
+    text-align: center;
+}
+
+.card-body {
+    /* display: flex; */
+    margin: auto;
+    align-items: center;
+    /* margin: 10px; */
+    flex: 5;
+}
+
+.col-right-card {
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 10px 0px 10px 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.likeButton {
+    color: black;
+    height: 30px;
+    width: 80px;
+    background-color: #ffd966;
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 2px 2px black;
+    font-weight: bold;
+    margin: auto;
+}
+
+#addButton {
+    color: black;
+    height: 30px;
+    width: 160px;
+    background-color: #93c47d;
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 2px 2px black;
+    font-weight: bold;
+}

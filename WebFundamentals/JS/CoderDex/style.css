@@ -1,0 +1,16 @@
+
+
+#user {
+    border: 4px solid gray;
+    border-radius: 10-px;;
+}
+
+#gray {
+    font-style: italic;
+    color: gray;
+    font-size: 70%;
+}
+
+img {
+    border-radius: 50%;
+}

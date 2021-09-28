@@ -1,32 +1,48 @@
-// Use the acronym function below to return the acronyms, or capitalized first letters, of each word in a sentence
+// Use the parensValid(str) function below to receive a string with any number of parenthesis in it
+// Return true if the parenthesis are valid and false if they are not
+// We are looking to see if the opening and closing parenthesis match up correctly or not
 
-// Example: acronym("free all rodents that like evil kittens") would return the string "FARTLEK"
-// NOTE: A Fartlek is a period of fast running intermixed with periods of slower running - you're welcome (:
-// TIP: A string can be treated like an array of letters.  For example "car" could be used as ["c","a","r"]
+// Example 1:"y(3(p)p(3)r)s" returns true
+// Example 2: "n(0(p)3" returns false
+// Example 3: "n)0(t(o)k" returns false
+// Example 4: "((()))" returns true
+// Example 5: "()())(" returns false
+// Example 6: "hello!" returns true (there are no parenthesis to be invalid)
 
-function acronym(str) {
-    console.log("hi")
-}
+// HINTS: You can loop through a string!
+// Consider using a counter or an array or object to track your parenthesis
+// Start out simple like "())" or "(())", work through it mentally, and then work out from there
+// Every single opening parenthesis has a closing one as well
+// A closing parenthesis should never appear before an opening parenthesis
+// We can ignore everything in the string except the parenthesis
 
-console.log(acronym("free all rodents that like evil kittens"));
-console.log(acronym("never obey older babies sarcastically"));
-
-let x = "free all rodents that like evil kittens"
-
-// Use the reverseString function below to take in a string and reverse the order of each character in that string
-
-// Example: reverseString("creature") would return "erutaerc"
-// Example: reverseString("really?") would return "?yllaer"
-// Example: reverseString("yo banana boy") would return "yob ananab oy"
-// Example: reverseString("borrow or rob") would return "bor ro worrob"
-
-//  Don't use the built-in reverse() method!  That is cheating (: and you don't want to cheat!
-
-function reverseString(str) {
+function parensValid(str) {
     // your code here
 }
 
-console.log(reverseString("creature"))
-console.log(reverseString("really?"))
-console.log(reverseString("yo banana boy"))
-console.log(reverseString("borrow or rob"))
+console.log(parensValid("y(3(p)p(3)r)s"));
+console.log(parensValid("n(0(p)3"));
+console.log(parensValid("n)0(t(o)k"));
+console.log(parensValid("((()))"));
+console.log(parensValid("()())("));
+console.log(parensValid("hello!"));
+
+
+
+// Use the bracesValid function below to receive a string with any number of parenthesis, 
+//    square brackets, and curly brackets in it
+// Return true if the parenthesis, square brackets, and curly brackets line up and return false if they don't 
+
+// Example 1: "({[({})]})" --> true
+// Example 2: "d(i{a}l[t]o)n{e!" --> false
+// Example 2: "{{[a]}}(){bcd}{()}" --> true
+
+// HINTS: Same hints as the parensValid function, except now we have to check for three kinds of characters
+
+function bracesValid(str) {
+    // your code here
+}
+
+console.log(bracesValid("({[({})]})"))
+console.log(bracesValid("d(i{a}l[t]o)n{e!"))
+console.log(bracesValid("{{[a]}}(){bcd}{()}"))

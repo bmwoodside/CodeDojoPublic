@@ -2,8 +2,8 @@
 
 x = [ [5,2,3], [10,8,9] ] 
 students = [
-     {'first_name':  'Michael', 'last_name' : 'Jordan'},
-     {'first_name' : 'John', 'last_name' : 'Rosales'}
+    {'first_name':  'Michael', 'last_name' : 'Jordan'},
+    {'first_name' : 'John', 'last_name' : 'Rosales'}
 ]
 sports_directory = {
     'basketball' : ['Kobe', 'Jordan', 'James', 'Curry'],
@@ -18,6 +18,7 @@ for i in x:
             if i[j] == 10:
                 i[j] = 15
 print(x)
+
 
 #1.2 (intentionally did extra work here with the loop)
 for i in students:

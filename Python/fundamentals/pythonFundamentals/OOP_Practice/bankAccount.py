@@ -1,14 +1,17 @@
 class BankAccount:
 
     bank_funds_allAccounts = []
+    temp_sum = 0
 
     def __init__(self, interest_rate = 0.01, starting_balance = 0):
         self.interest_rate = interest_rate
         self.account_balance = starting_balance
+        BankAccount.bank_funds_allAccounts.append(self.account_balance)
     
 
     def deposit(self, amount):
         self.account_balance += amount
+        BankAccount.temp_sum += amount
         return self
     
     def withdraw(self, amount):
@@ -39,7 +42,7 @@ class BankAccount:
     def all_balances(cls):
         sum = 0
         for i in cls.bank_funds_allAccounts:
-            sum += i.balance
+            sum += i
         print(sum)
         return sum
 
@@ -49,4 +52,7 @@ test2 = BankAccount(0.05, 50)
 test1.deposit(100).deposit(25).deposit(100).withdraw(25).yield_interest().display_account_info()
 test2.deposit(100).deposit(200).withdraw(30).withdraw(50).withdraw(5).withdraw(65).yield_interest().display_account_info()
 
+print(BankAccount.bank_funds_allAccounts)
+
 BankAccount.all_balances()
+print(BankAccount.temp_sum)

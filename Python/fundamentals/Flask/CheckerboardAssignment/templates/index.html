@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <h1>Checkboard</h1>
+
+    <div class="checkerboard-container">
+        <table>
+        {% for i in range(4) %}
+            <tr>
+                {% for i in range(4) %}
+                <td>
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in range(4) %}
+                <td>
+                    <div class="box2"></div>
+                    <div class="box1"></div>
+                </td>
+                {% endfor %}
+            </tr>
+
+        {% endfor %}
+        </table>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -9,25 +9,19 @@ app.secret_key = 'somethingsuperspecialthatknowoneknowsabout'
 
 @app.route("/")
 def welcome():
-    session["counter"] = request.form
-    count = session["counter"] + 1
-    return render_template("/index.html", count="countValue")
+    if 'counter' in session:
+        session["counter"] += 1
+    else:
+        session["counter"] = 1
 
+    count = session["counter"]
+    print(count)
+    return render_template("/index.html", countValue=count)
 
-# @app.route("/countTimes")
-# def countVisitTimes():
-#     session["count"] = session["count"] + 1
-
-    
-    
-#     return redirect("/")
-
-
-
-
-
-
-
+@app.route("/destroy_session")
+def destroySession():
+    del session["counter"]
+    return redirect("/")
 
 
 

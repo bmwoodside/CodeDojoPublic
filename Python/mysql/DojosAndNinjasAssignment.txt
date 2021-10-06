@@ -1,0 +1,33 @@
+INSERT INTO dojos (name)
+VALUES ('dojo1');
+
+INSERT INTO dojos (name)
+VALUES ('dojo2');
+
+INSERT INTO dojos (name)
+VALUES ('dojo3');
+
+DELETE FROM dojos WHERE dojos.id <= 3;
+
+INSERT INTO dojos (name)
+VALUES
+    ('dojo1'),
+    ('dojo2'),
+    ('dojo3');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('firstname2', 'lastname2', 42, 4),
+('firstname3', 'lastname3', 42, 4),
+('firstname4', 'lastname4', 42, 5),
+('firstname5', 'lastname5', 42, 5),
+('firstname6', 'lastname6', 42, 5),
+('firstname7', 'lastname7', 42, 6),
+('firstname8', 'lastname8', 42, 6),
+('firstname9', 'lastname9', 42, 6)
+
+SELECT * FROM ninjas WHERE dojo_id = 4
+
+SELECT * FROM ninjas WHERE dojo_id = 6
+
+SELECT dojos.name FROM dojos
+JOIN ninjas on dojos.id = ninjas.dojo_id WHERE ninjas.id = 9

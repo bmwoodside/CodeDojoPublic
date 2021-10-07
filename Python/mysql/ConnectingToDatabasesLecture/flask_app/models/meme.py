@@ -1,4 +1,5 @@
-from mysqlconnection import connectToMySQL
+
+from flask_app.config.mysqlconnection import connectToMySQL
 
 class Meme:
     def __init__(self, data):

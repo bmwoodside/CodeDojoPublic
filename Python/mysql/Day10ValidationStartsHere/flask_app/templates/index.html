@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>**You like to tell us everything**</title>
+</head>
+<body>
+    
+
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" width="150">
+    <h2>Tell us ALL about yourself</h2>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color:red">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action="validatevictim" method="POST">
+        <p>
+            What is your FULL Name?
+            <input type="text" name="fullname">
+        </p>
+        <p>
+            What is your personal email?
+            <input type="text" name="email">
+        </p>
+        <p>
+            What is your mother's maiden name?
+            <input type="text" name="maiden">
+        </p>
+        <p>
+            For verification purposes, what's your social?
+            <input type="text" name="social">
+        </p>
+        <p>
+            <input type="checkbox" name="trash">
+            I agree to have my trash gone through (sanitary purposes)
+        </p>
+        <input type="submit" value="Submit Your Life">
+    </form>
+
+</body>
+</html>

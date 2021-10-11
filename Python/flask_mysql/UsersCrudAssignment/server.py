@@ -84,7 +84,7 @@ def update_user():
     }
 
     Users.update_user(data)
-    return redirect("/showOne/<int:data['id']>")
+    return redirect("/showOne/" + str(data['id']))
 
 @app.route("/create_form")
 def create_form():

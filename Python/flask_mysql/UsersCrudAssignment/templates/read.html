@@ -20,6 +20,7 @@
             <td>email</td>
             <td>created at</td>
             <td>updated at</td>
+            <td>actions</td>
         </tr>
 
         {% for i in all_users %}
@@ -31,6 +32,7 @@
                 <td>{{ i.email }}</td>
                 <td>{{ i.created_at }}</td>
                 <td>{{ i.updated_at }}</td>
+                <td><a href="/showOne/{{i.id}}">Show</a></td>
             </tr>
 
         {% endfor %}

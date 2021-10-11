@@ -26,9 +26,26 @@ class Users:
         
         return usersList
     
+    
+    @classmethod
+    def get_single_user(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s"
+        single_user = connectToMySQL("users_crud_assignment").query_db(query, data)
+        return cls(single_user[0])
+    
     @classmethod
     def add_new_user(cls, data):
         query = "INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s)"
+        return connectToMySQL("users_crud_assignment").query_db(query, data)
+    
+    @classmethod
+    def update_user(cls, data):
+        query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s WHERE id = %(id)s"
+        return connectToMySQL("users_crud_assignment").query_db(query, data)
+    
+    @classmethod
+    def delete_user(cls, data):
+        query = "DELETE FROM users WHERE id = %(id)s"
         return connectToMySQL("users_crud_assignment").query_db(query, data)
 
 
@@ -40,6 +57,34 @@ def index():
 def read():
     all_users = Users.get_all_users()
     return render_template("read.html", all_users=all_users)
+
+@app.route("/showOne/<int:id>")
+def display_single_user(id):
+    data = {
+        "id": id
+    }
+    single_user = Users.get_single_user(data)
+    return render_template("readone.html", single_user=single_user)
+
+@app.route("/editUser/<int:id>")
+def edit_single_user(id):
+    data = {
+        "id": id
+    }
+    single_user = Users.get_single_user(data)
+    return render_template("editUser.html", single_user=single_user)
+
+@app.route("/changeUserInfo", methods=["POST"])
+def update_user():
+    data = {
+        "id": request.form["id"],
+        "first_name": request.form["first_name"],
+        "last_name": request.form["last_name"],
+        "email": request.form["email"]
+    }
+
+    Users.update_user(data)
+    return redirect("/showOne/<int:data['id']>")
 
 @app.route("/create_form")
 def create_form():
@@ -56,6 +101,13 @@ def add_new_user():
     Users.add_new_user(data)
     return redirect("/read")
 
+@app.route("/deleteUser/<int:id>")
+def delete_user(id):
+    data = {
+        "id": id
+    }
+    Users.delete_user(data)
+    return redirect("/read")
 
 
 

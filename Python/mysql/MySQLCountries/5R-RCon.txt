@@ -1,0 +1,4 @@
+RConPassword 5thRangers!$
+MaxPing 999
+RConIP 173.234.25.162
+RConPort 2406

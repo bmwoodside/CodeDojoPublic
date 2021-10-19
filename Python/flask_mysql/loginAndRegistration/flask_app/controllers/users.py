@@ -13,6 +13,7 @@ def index():
 @app.route("/register", methods=["POST"])
 def register():
     if not Users.validate_register(request.form):
+        print()
         return redirect("/")
     hash = bcrypt.generate_password_hash(request.form['password'])
     user_data = {
@@ -22,13 +23,8 @@ def register():
         "password" : hash
     }
 
-    # if Users.check_email_exists(user_data["email"]):
-    #     flash("Please use a unique email address")
-    #     return redirect("/")
-
     user_id = Users.save(user_data)
     session['user_id'] = user_id
-    print(session)
     return redirect("/users")
 
 @app.route("/users")

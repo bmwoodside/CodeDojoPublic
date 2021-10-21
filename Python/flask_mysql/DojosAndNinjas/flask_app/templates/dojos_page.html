@@ -17,7 +17,12 @@
 
     <h3>Dojos List:</h3>
     {% for dojo in display_dojos %}
-    <p>{{ dojo.name }}</p>
+
+    <p>
+        <a href="/dojos/{{dojo.id}}">
+            {{ dojo.name }}
+        </a>
+    </p>
 
     {% endfor %}
 </body>

@@ -22,6 +22,5 @@ class Dojos:
 
     @classmethod
     def add_dojo(cls, data):
-        query = ""
-
-        return redirect("/dojo_page.html")
+        query = "INSERT INTO dojos (name) VALUES (%(name)s)"
+        return connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)

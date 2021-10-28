@@ -10,7 +10,7 @@
 
 
     <div id="root">
-        <h1>'not kittens'</h1>
+        <h1>First React page rendering...</h1>
     </div>
     
     
@@ -23,9 +23,13 @@
     <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> 
 
     <script>
+        const App = React.createElement("h1", {}, "Our First React page has rendered");
+        ReactDOM.render(App, document.getElementById("root"));
+    </script>
+    <!-- <script>
         const myReactComponent = React.createElement('h1', {}, 'Kittens')
         ReactDOM.render(myReactComponent, document.getElementById('root'))
-    </script>
+    </script> -->
     
 </body>
 </html>

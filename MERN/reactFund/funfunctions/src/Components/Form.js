@@ -29,13 +29,13 @@ const Form = (props) => {
 
                 <form onSubmit = { createUser }></form>
                 <div>
-                    Username: <input type="text" onChange={(e) => setUsername(e.target.value)}></input>
+                    Username: <input type="text" onChange={(e) => setUsername(e.target.value)} value={username}></input>
                 </div>
                 <div>
-                    Email: <input type="text" onChange={(e) => setEmail(e.target.value)}></input>
+                    Email: <input type="text" onChange={(e) => setEmail(e.target.value)} value={email}></input>
                 </div>
                 <div>
-                    Password: <input type="text" onChange={(e) => setPassword(e.target.value)}></input>
+                    Password: <input type="text" onChange={(e) => setPassword(e.target.value)} value={password}></input>
                 </div>
 
                 <input type="submit" value="Create User"></input>

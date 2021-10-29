@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       <PersonCard person={person1} />
-      <PersonCard person={person2}></PersonCard>
-      <PersonCard person={person3}></PersonCard>
-      <PersonCard person={person4}></PersonCard>
+      <PersonCard person={person2} />
+      <PersonCard person={person3} />
+      <PersonCard person={person4} />
     </div>
   );
 }

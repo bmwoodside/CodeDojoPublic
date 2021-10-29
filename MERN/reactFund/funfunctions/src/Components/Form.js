@@ -25,21 +25,22 @@ const Form = (props) => {
             {
                 hasBeenSubmitted
                 ? <h3>Thanks for your submission</h3>
-                : <form onSubmit = { createUser }>
+                : 
+                <form onSubmit = { createUser }>
 
-                <form onSubmit = { createUser }></form>
-                <div>
-                    Username: <input type="text" onChange={(e) => setUsername(e.target.value)} value={username}></input>
-                </div>
-                <div>
-                    Email: <input type="text" onChange={(e) => setEmail(e.target.value)} value={email}></input>
-                </div>
-                <div>
-                    Password: <input type="text" onChange={(e) => setPassword(e.target.value)} value={password}></input>
-                </div>
+                    <div>
+                        Username: <input type="text" onChange={(e) => setUsername(e.target.value)} value={username}></input>
+                    </div>
+                    <div>
+                        Email: <input type="text" onChange={(e) => setEmail(e.target.value)} value={email}></input>
+                    </div>
+                    <div>
+                        Password: <input type="text" onChange={(e) => setPassword(e.target.value)} value={password}></input>
+                    </div>
 
-                <input type="submit" value="Create User"></input>
-            </form>
+                    <input type="submit" value="Create User"></input>
+                </form>
+
 
             }
         </div>

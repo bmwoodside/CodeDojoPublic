@@ -21,16 +21,17 @@ function decimalToBinary(decimal) {
     return binary;
 }
 
-console.log(binaryToDecimal("1010"));
-console.log(binaryToDecimal("1111101"));
-console.log(binaryToDecimal("10101"));
-console.log(binaryToDecimal("10000001"));
+// console.log(binaryToDecimal("1010"));
+// console.log(binaryToDecimal("1111101"));
+// console.log(binaryToDecimal("10101"));
+// console.log(binaryToDecimal("10000001"));
 
-console.log(decimalToBinary(5));
-console.log(decimalToBinary(127));
-console.log(decimalToBinary(255));
-console.log(decimalToBinary(256));
-console.log(decimalToBinary(102));
+// console.log(decimalToBinary(5));
+// console.log(decimalToBinary(127));
+// console.log(decimalToBinary(255));
+// console.log(decimalToBinary(256));
+// console.log(decimalToBinary(102));
+// console.log(decimalToBinary(11749));
 
 // discord answers by hand
 // decimal to binary

@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 
 
@@ -15,20 +15,49 @@ public class Human {
     private int strength = 3;
     private int dexterity = 3;
 
+    private static int allHumans = 0;
+
     // constructors
-    public Human() {}
+    public Human() {
+        allHumans++;
+    }
 
     public Human(String name) {
         this.name = name;
+        allHumans++;
     }
 
     public Human(String name, int age) {
         this.name = name;
         this.age = age;
+        allHumans++;
     }
 
+    // instance methods
+    public void eat() {
+        System.out.println(this.name + " is eating an apple! om nom nom!");
+        this.health += 5;
+    }
+
+    public void getPoisoned() {
+        System.out.println(this.name + " is poisoned! Oh no!");
+        this.health -= 3;
+    }
+
+    public void pastaAndCreamSauce() {
+        System.out.println(this.name + " was fully regenerated!!");
+        this.health = 100;
+    }
+
+    public void attack(Human attackee) {
+        attackee.setHealth(attackee.getHealth() - this.strength);
+    }
 
     // getters & setters
+    public static int getAllHumans() {
+        return allHumans;
+    }
+
     public String getName() {
         return name;
     }

@@ -1,4 +1,4 @@
-
+import java.util.Random;
 
 public class BankAccount {
 
@@ -6,18 +6,27 @@ public class BankAccount {
     private String name;
     private double checkingBalance;
     private double savingsBalance;
+    private int accountNumber;
 
     // static methods
     private static int totalAccountsCreated = 0;
     private static double totalAccountsMoney = 0;
 
+    private int randomAccountNumber() {
+        Random rando = new Random();
+        int number = rando.nextInt(999999999);
+        return number;
+    }
+
     // constructors
     public BankAccount() {
         totalAccountsCreated++;
+        this.accountNumber = randomAccountNumber();
     };
 
     public BankAccount(String name) {
         this.name = name;
+        this.accountNumber = randomAccountNumber();
         totalAccountsCreated++;
     }
 
@@ -35,6 +44,11 @@ public class BankAccount {
     }
     public static double getTotalAccountsMoney() {
         return totalAccountsMoney;
+    }
+
+    public int getAccountNumber() {
+        System.out.println("Account Number: " + this.accountNumber);
+        return this.accountNumber;
     }
 
     public double getCheckingBalance() {

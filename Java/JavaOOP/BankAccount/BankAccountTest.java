@@ -5,6 +5,8 @@
 public class BankAccountTest {
     public static void main(String[] args) {
 
+        BankAccount newBankAccount = new BankAccount();
+
         BankAccount test1 = new BankAccount("Humpty Dumpty");
 
         test1.addCheckingBalance(5.25);
@@ -22,6 +24,8 @@ public class BankAccountTest {
 
         System.out.println("# Accounts: " + BankAccount.getTotalAccountsCreated());
         System.out.println("Total Money: $" + BankAccount.getTotalAccountsMoney()); // $15
+        
+        System.out.println("Humpty Dumpty account Number: " + test1.getAccountNumber());
 
 
 

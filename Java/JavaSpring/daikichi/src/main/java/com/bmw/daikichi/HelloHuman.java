@@ -14,17 +14,17 @@ public class HelloHuman {
 //		return "Hello Human";
 //	}
 //	
-	@RequestMapping("/")
-	public String queryTest(@RequestParam(value="q", required=false) String searchQuery) {
-		if (searchQuery == null) {
-			return "Hello Human";
-		}
-		else {
-			return "Hello " + searchQuery;
-		}
-	}
-
-	
+//	@RequestMapping("/")
+//	public String queryTest(@RequestParam(value="q", required=false) String searchQuery) {
+//		if (searchQuery == null) {
+//			return "Hello Human";
+//		}
+//		else {
+//			return "Hello " + searchQuery;
+//		}
+//	}
+//
+//	
 	
 	
 	

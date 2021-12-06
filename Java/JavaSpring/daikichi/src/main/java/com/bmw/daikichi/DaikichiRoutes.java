@@ -1,9 +1,8 @@
 package com.bmw.daikichi;
 
-import org.springframework.boot.SpringApplication;
-
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -11,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class DaikichiRoutes {
 	
 	
-	@RequestMapping("/")
-	public String index() {
-		return "Hello World";
-	}
+//	@RequestMapping("/")
+//	public String index(@RequestParam(value="q", required=false) String searchQuery) {
+//		return "You searched for: " + searchQuery;
+//	}
 	
 	@RequestMapping("/daikichi")
 	public String welcome() {

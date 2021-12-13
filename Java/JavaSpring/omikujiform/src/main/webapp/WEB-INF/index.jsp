@@ -13,7 +13,7 @@
 <h1>Send an Omikuji!</h1>
 
 <div class="formArea">
-<form action="/submit" method="post">
+<form action="/omikuji/submit" method="post">
 	
 	<p>
 		<label for="numberSelect">Pick any number from 5 to 25</label><br>

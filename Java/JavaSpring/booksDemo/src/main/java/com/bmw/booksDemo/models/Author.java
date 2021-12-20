@@ -73,7 +73,7 @@ public class Author {
 	
 	// Constructors
 	
-	public Author() {} // why an empty constructor?
+	public Author() {}
 
 	public Author(
 			@NotEmpty(message = "Please add a value to the First Name field!") @Size(min = 2, max = 100, message = "First Name must be between 2-100 characters!") String firstName,

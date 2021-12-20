@@ -42,20 +42,23 @@ public class Expense {
 	
 	public Expense() {
 	}
-	public Expense(String expenseName, String vendor, float amount, String expenseDescription) {
+		
+	public Expense(
+			@NotNull @Size(min = 3, max = 200, message = "must be between 3 and 200 characters long.") String expenseName,
+			@NotNull @Size(min = 3, max = 200, message = "must be between 3 and 200 characters long.") String vendor,
+			@NotNull @DecimalMin(value = "0.01", message = "must be greater than $0.01") float amount,
+			@NotNull @Size(min = 10, max = 300, message = "must be between 10 and 300 characters long.") String expenseDescription) {
 		this.expenseName = expenseName;
 		this.vendor = vendor;
 		this.amount = amount;
 		this.expenseDescription = expenseDescription;
 	}
-	// does expense instance need this.id? (how to get?)
-	// why is it trying to convert my (float) amount to (long)?
-	
-	
 	
 	
 	// Getters & Setters
 	
+	
+
 	public String getExpenseName() {
 		return expenseName;
 	}

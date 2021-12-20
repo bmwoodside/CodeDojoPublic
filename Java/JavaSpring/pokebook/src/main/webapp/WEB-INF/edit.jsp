@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page isErrorPage="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,31 +16,11 @@
 </head>
 <body>
 
-<h1 style="color: blue;">PokeBook</h1>
+<h1 style="color: blue;"><c:out value="${expense.expenseName }">Placeholder Name</c:out></h1>
 
-<table>
-	<thead>
-		<tr>
-			<th>Expense</th>
-			<th>Vendor</th>
-			<th>Amount</th>
-		</tr>
-	</thead>
-	
-	<tbody>
-		<c:forEach var="oneExpense" items="${allExpenses}">
-			<tr>
-				<td><c:out value="${oneExpense.expenseName}">expense</c:out></td>
-				<td><c:out value="${oneExpense.vendor}">vendor</c:out></td>
-				<td><c:out value="${oneExpense.amount}">amount</c:out></td>
-				<td><a href="/expense/${oneExpense.id}/edit">edit</a></td>
-			</tr>
-		</c:forEach>
-	</tbody>
 
-</table>
-
-<form:form method="POST" action="/addExpense" modelAttribute="newExpense">
+<form:form method="POST" action="/expense/${expense.id}" modelAttribute="expense">
+<input type="hidden" name="_method" value="put">
 	<h2>Track an expense:</h2>
 	<p>
 		<form:errors path="expenseName" class="text-danger"/><br>
@@ -62,9 +43,10 @@
 		<form:textarea path="expenseDescription" rows="5" cols="30"/>
 	</p>
 	
-	<input type="submit" value="Submit"/>
+	<input type="submit" value="Update"/>
 	
 </form:form>
+
 
 
 </body>

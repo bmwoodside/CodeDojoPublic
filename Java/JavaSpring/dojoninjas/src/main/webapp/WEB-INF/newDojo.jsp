@@ -13,7 +13,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title Here</title>
+<title>New Dojo</title>
   <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
       rel="stylesheet" 
@@ -22,11 +22,23 @@
 
 </head>
 <body>
-    <div class="container">
+
+	<h1>New Dojo</h1>
+    
+	<form:form action="/newDojo" method="post" modelAttribute="dojo">
         
-        <h1>INDEX</h1>
+        <p>
+        	<form:errors path="name" class="text-danger"/><br>
+        	<form:label path="name">Name: </form:label>
+        	<form:input path="name"/>
+        </p>
         
+        <a href="/shows"><button type="button" class="btn btn-secondary">Cancel</button></a>
+        <input type="submit" class="btn btn-success" value="Create"/>
         
-    </div>
+    </form:form>
+    
+    
+    
 </body>
 </html>

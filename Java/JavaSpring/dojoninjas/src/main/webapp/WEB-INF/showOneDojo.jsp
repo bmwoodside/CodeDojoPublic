@@ -13,7 +13,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title Here</title>
+<title>Dojo Page</title>
   <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
       rel="stylesheet" 
@@ -22,11 +22,30 @@
 
 </head>
 <body>
-    <div class="container">
-        
-        <h1>INDEX</h1>
-        
-        
-    </div>
+	
+	<h1><c:out value="${dojo.name }"/> Location Ninjas</h1>
+		
+	
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="ninja" items="${allNinjas }">
+				<tr>
+					<td><c:out value="${ninja.firstName }"/></td>
+					<td><c:out value="${ninja.lastName }"/></td>
+					<td><c:out value="${ninja.age }"/></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+    
+    
+    
 </body>
 </html>

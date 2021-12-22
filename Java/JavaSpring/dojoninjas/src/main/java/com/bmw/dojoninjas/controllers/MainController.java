@@ -27,10 +27,12 @@ public class MainController {
 		this.ninjaServ = ninjaServ;
 	}
 	
-	@GetMapping("/")
-	public String index(@ModelAttribute("dojo") Dojo dojo) {
-		return "index.jsp";
-	}
+//	@GetMapping("/")
+//	public String index(@ModelAttribute("dojo") Dojo dojo, Model model) {
+//		model.getAttribute(null).getName();
+//		
+//		return "index.jsp";
+//	}
 	
 	@GetMapping("/dojos/new")
 	public String createDojo(Model model) {
@@ -54,7 +56,7 @@ public class MainController {
 	public String oneDojo(@PathVariable("id") Long id, Model model) {
 		Dojo dojo = dojoServ.getOneDojo(id);
 		model.addAttribute(dojo);
-		return "dojo.jsp";
+		return "showOneDojo.jsp";
 	}
 	
 	@GetMapping("/ninja/new")
@@ -70,9 +72,14 @@ public class MainController {
 			return "ninja.jsp";
 		}
 		ninjaServ.saveNinja(ninja);
-//		return "redirect:/dojo/{id}";
-		return "showOneDojo.jsp";
+		return "redirect:/dojo/"+ninja.getDojo().getId();
 	}
-	
+//	
+//	@GetMapping("/dojo/{id}")
+//	public String showOneDojo() {
+//		
+//		return "showOneDojo.jsp";
+//	}
+//	
 	
 }

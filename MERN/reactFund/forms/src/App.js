@@ -6,9 +6,9 @@ import TraditionalForm from './Components/TraditionalForm';
 function App() {
   return (
     <div className="App">
-      {/* <HookForm /> */}
+      <HookForm />
       {/* <TraditionalForm /> */}
-      <SimpleForm />
+      {/* <SimpleForm /> */}
     </div>
   );
 }

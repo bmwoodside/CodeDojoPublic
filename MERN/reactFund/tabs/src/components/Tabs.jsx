@@ -10,15 +10,19 @@ const Tabs = props => {
         {header: "Tab 3", content: "Tab 3 Content"},
     ]);
 
-
+    const updateContent = (string) => {
+        console.log(string);
+        document.getElementById("contentContainer").innerText = string;
+    }
 
     return (
         <div className="tabs">
 
             <h1>Tabs:</h1>
             {tabs.map( (tab, i) => 
-                <div key={i}>{tab.header}</div>
+                <div key={i}><button onClick={updateContent(tab.content)}>{tab.header}</button></div>
             )}
+            <textarea id="contentContainer"></textarea>
 
         </div>
     )

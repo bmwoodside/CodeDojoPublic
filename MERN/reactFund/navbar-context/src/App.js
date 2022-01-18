@@ -1,14 +1,18 @@
 import './App.css';
-import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import FormWrapper from './components/FormWrapper';
+import {MyContext} from './context/MyContext';
+import { useState } from 'react';
 
 function App() {
+
+  const [username, setUsername] = useState('');
+
   return (
-    <Wrapper>
+    <MyContext.Provider value={{username, setUsername}}>
       <Navbar />
       <FormWrapper />
-    </Wrapper>
+    </MyContext.Provider>
   );
 }
 

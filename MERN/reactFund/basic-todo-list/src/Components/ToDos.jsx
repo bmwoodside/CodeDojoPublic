@@ -12,14 +12,14 @@ const ToDos = props => {
             <h3>Description: {props.oneTodo.description}</h3>
             <h3>Priority: {props.oneTodo.priority}</h3>
 
-            {/* <table>
+            <table>
                 <tr>
                     <th>Item</th>
                     <th>Description</th>
                     <th>Is Complete?</th>
                 </tr>
 
-                {todos.map(todo => (
+                {myTodo.map(todo => (
                     <tr key={todo.id}>
                         <td>{todo.item}</td>
                         <td>{todo.description}</td>
@@ -28,7 +28,7 @@ const ToDos = props => {
                     </tr>
                     ) )}
                 
-            </table> */}
+            </table>
         </div>
     )
 

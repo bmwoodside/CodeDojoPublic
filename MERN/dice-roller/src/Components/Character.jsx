@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 
 
 const Character = props => {
-    const [name, setName] = useState('');
-    const [height, setHeight] = useState('');
-    const [mass, setMass] = useState('');
-    const [hairColor, setHairColor] = useState('');
-    const [race, setRace] = useState('');
-    const [alignment, setAlignment] = useState('');
-    
+    const [character, setCharacter] = useState({
+        name: "",
+        height: "",
+        mass: "",
+        hairColor: "",
+        race: "",
+        alignment: ""
+    })
 
     // const rollD4 = () => Math.floor(Math.random() * 4) + 1;
     const rollD6 = () => Math.floor(Math.random() * 6) + 1;
@@ -36,12 +37,23 @@ const Character = props => {
         return stats;
     };
 
+    const rerollStats = () => {
+        setStats(rollStats());
+    }
+
+    const keepStats = () => {
+        // keep stats... store in state or something, then redirect.
+    }
+
     const [stats, setStats] = useState(rollStats());
 
     
     return (
         <>
-            <h1>{name}, placeholder</h1>
+            <h1>{character.name}, placeholder</h1>
+            {console.log(stats)}
+            <button onClick={rerollStats}>Roll New Stats</button>
+            <button onClick={keepStats}>Keep These Stats!</button>
         </>
     );
 

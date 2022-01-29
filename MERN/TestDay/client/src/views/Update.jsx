@@ -14,7 +14,7 @@ const Update = (props) => {
     const history = useHistory();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pets/' + id)
+        axios.get('http://localhost:8000/api/pets/' + id)
             .then(res => {
                 setForm(res.data)
             })
@@ -24,7 +24,7 @@ const Update = (props) => {
         e.preventDefault();
 
         form.petName.length >= 3 && form.petType.length >= 3 && form.petDescription.length >= 3
-            ? axios.put('http://localhost:8000/pet/' + id, {
+            ? axios.put('http://localhost:8000/api/pet/' + id, {
                 petName: form.petName,
                 petType: form.petType,
                 petDescription: form.petDescription,
@@ -35,7 +35,7 @@ const Update = (props) => {
             })
                 .then(res => {
                     console.log(res)
-                    history.push("/");
+                    history.push("/api/");
                 })
                 .catch(err => console.log(err))
             : setFormError("Fix the errors before submitting.")
@@ -53,7 +53,7 @@ const Update = (props) => {
         <div>
             <div className='header-banner'>
                 <h1>Pet Shelter</h1>
-                <Link to="/">back to home</Link>
+                <Link to="/api/">back to home</Link>
             </div>
             <h2>Edit {form.petName}</h2>
             <form onSubmit={updatePet} className="petForm">

@@ -17,19 +17,19 @@ function App() {
     <BrowserRouter>
       <div className='App'>
 
-        <Route exact path="/">
+        <Route exact path="/api/">
           <Main />
         </Route>
 
-        <Route exact path="/pet/new">
+        <Route exact path="/api/pet/new">
           <PetForm />
         </Route>
 
-        <Route exact path="/pets/:id">
+        <Route exact path="/api/pets/:id">
           <Detail />
         </Route>
 
-        <Route exact path="/pets/:id/edit">
+        <Route exact path="/api/pets/:id/edit">
           <Update />
         </Route>
 

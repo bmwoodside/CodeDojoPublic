@@ -33,10 +33,10 @@ const PetForm = () => {
 
         //if validations, make axios post request for new pet
         form.petName.length >= 3 && form.petType.length >= 3 && form.petDescription.length >= 3
-            ? axios.post('http://localhost:8000/pet', form)
+            ? axios.post('http://localhost:8000/api/pet', form)
                 .then(res => {
                     console.log(res)
-                    history.push("/")
+                    history.push("/api/")
                 })
                 .catch(err => console.log(err))
             : setFormError("Fix the errors before submitting.")

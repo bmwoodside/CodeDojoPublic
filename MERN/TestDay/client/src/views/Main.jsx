@@ -9,7 +9,7 @@ const Main = (props) => {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/pets")
+        axios.get("http://localhost:8000/api/pets")
             .then(res => {
                 setPets(res.data);
                 setLoaded(true);
@@ -25,7 +25,7 @@ const Main = (props) => {
         <div>
             <div className='header-banner'>
                 <h1>Pet Shelter</h1>
-                <Link to="/pet/new">add a pet to the shelter</Link>
+                <Link to="/api/pet/new">add a pet to the shelter</Link>
             </div>
             <h3>These pets are looking for a good home</h3>
             {loaded && <PetsDisplay pets={pets} removeFromDom={removeFromDom} />}

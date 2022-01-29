@@ -9,13 +9,13 @@ const Detail = (props) => {
     const tempLikes = pet.petLikes += 1/2;
 
     useEffect(() => {
-        axios.get("http://localhost:8000/pets/" + id)
+        axios.get("http://localhost:8000/api/pets/" + id)
             .then(res => setPet(res.data))
             .catch(err => console.log(err))
     }, []);
 
     const deletePet = (petId) => {
-        axios.delete('http://localhost:8000/pets/' + petId)
+        axios.delete('http://localhost:8000/api/pets/' + petId)
             .then(res => {
                 console.log(res)
             })
@@ -24,7 +24,7 @@ const Detail = (props) => {
 
     const likesHandler = () => {
         setDisable(true)
-        axios.put('http://localhost:8000/pet/' + id, {
+        axios.put('http://localhost:8000/api/pet/' + id, {
             ...pet,
             [pet.petLikes]: tempLikes
         })

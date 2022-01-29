@@ -21,7 +21,7 @@ const PetsDisplay = (props) => {
                         <tr key={i}>
                             <td>{pet.petName}</td>
                             <td>{pet.petType}</td>
-                            <td><Link to={`/pets/` + pet._id}>Details</Link> | <Link to={"/pets/" + pet._id + "/edit"}>Edit</Link></td>
+                            <td><Link to={`/api/pets/` + pet._id}>Details</Link> | <Link to={"/api/pets/" + pet._id + "/edit"}>Edit</Link></td>
                         </tr>
                     )}
                 </tbody>

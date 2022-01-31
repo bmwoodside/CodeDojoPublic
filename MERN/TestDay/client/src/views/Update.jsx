@@ -35,7 +35,7 @@ const Update = (props) => {
             })
                 .then(res => {
                     console.log(res)
-                    history.push("/api/");
+                    history.push("/");
                 })
                 .catch(err => console.log(err))
             : setFormError("Fix the errors before submitting.")
@@ -53,7 +53,7 @@ const Update = (props) => {
         <div>
             <div className='header-banner'>
                 <h1>Pet Shelter</h1>
-                <Link to="/api/">back to home</Link>
+                <Link to="/">back to home</Link>
             </div>
             <h2>Edit {form.petName}</h2>
             <form onSubmit={updatePet} className="petForm">
@@ -71,7 +71,7 @@ const Update = (props) => {
                     
                     <label htmlFor="petType">
                     <p>Type <span>
-                        <input type="text" name="petType" onChange={(e) => {onChangeHandler(e); e.target.value.length < 3 ? setTypeError("Pet Type must have at least 3 characters."):setTypeError("")}}/>
+                        <input type="text" name="petType" onChange={(e) => {onChangeHandler(e); e.target.value.length < 3 ? setTypeError("Pet Type must have at least 3 characters."):setTypeError("")}} value={form.petType} />
                         </span></p>
                         {
                             typeError
@@ -82,7 +82,7 @@ const Update = (props) => {
                     
                     <label htmlFor="petDescription">
                     <p>Description <span>
-                        <input type="text" name="petDescription" onChange={(e) => {onChangeHandler(e); e.target.value.length < 3 ? setDescriptionError("Pet Description must have at least 3 characters."):setDescriptionError("")}}/>
+                        <input type="text" name="petDescription" onChange={(e) => {onChangeHandler(e); e.target.value.length < 3 ? setDescriptionError("Pet Description must have at least 3 characters."):setDescriptionError("")}} value={form.petDescription} />
                         </span></p>
                         {
                             descriptionError

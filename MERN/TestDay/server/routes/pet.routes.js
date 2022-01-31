@@ -2,7 +2,7 @@
 const PetController = require('../controllers/pet.controller');
 
 module.exports = function(app) {
-    // app.get('/api', PetController.index);
+    // app.get('/', PetController.index);
     app.post('/api/pet', PetController.createPet);
     app.get('/api/', PetController.getAllPets);
     app.get('/api/pets', PetController.getAllPets);

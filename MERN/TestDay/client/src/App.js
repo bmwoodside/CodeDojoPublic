@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <div className='App'>
 
-        <Route exact path="/api/">
+        <Route exact path="/">
           <Main />
         </Route>
 

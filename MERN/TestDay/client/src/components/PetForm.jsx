@@ -36,7 +36,7 @@ const PetForm = () => {
             ? axios.post('http://localhost:8000/api/pet', form)
                 .then(res => {
                     console.log(res)
-                    history.push("/api/")
+                    history.push("/")
                 })
                 .catch(err => console.log(err))
             : setFormError("Fix the errors before submitting.")

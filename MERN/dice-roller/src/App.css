@@ -13,9 +13,38 @@
   color: white;
 }
 
-.dice-container {
+
+/* !--- Dice Roller Views CSS start ---! */
+.dice-roller-app-view {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
+
+.container-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 30vw;
+}
+
+.container-col-mid {
+  height: 100vh;
+  width: 30vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.results-container {
+  margin: auto;
+}
+
+.container-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 30vw;
+}
+/* !--- Dice Roller Views CSS end ---! */

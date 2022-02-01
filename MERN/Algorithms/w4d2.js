@@ -6,16 +6,11 @@ function hexToDecimal(hex) {
     for (let i = hex.length - 1; i >= 0; i--) {
         // if hex[i] in hexValues, switch key for value
         if ( hex[i] in hexValues ) {
-            // console.log(hexValues[hex[i]])
 
             decimal += hexValues[hex[i]] * Math.pow(16, counter);
-            // add back the original value:
-            // some code here
         }
         else {
             decimal += hex[i] * Math.pow(16, counter);
-            //add back the original value:
-            //some code here
         }
         
         counter++;
@@ -37,3 +32,7 @@ function decimalToHex(decimal) {
 
 
 console.log(hexToDecimal("A2E"))
+console.log(hexToDecimal("1D2"));
+console.log(hexToDecimal("2C1"));
+console.log(hexToDecimal("3B5"));
+console.log(hexToDecimal("FFF"));

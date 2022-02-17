@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.landing-header-section {
+    max-width: 65vw;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.landing-body-section {
+    max-width: 65vw;
+    margin: auto;
+}
+

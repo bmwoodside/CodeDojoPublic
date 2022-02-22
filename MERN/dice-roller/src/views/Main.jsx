@@ -10,6 +10,8 @@ const Main = () => {
 
             <Link to="/dice"><button>Dice Roller</button></Link>
 
+            <Link to="/characterMaker"><button>Player Character Randomizer</button></Link>
+
             <Link to="/dm/tools"><button>DM Tools</button></Link>
 
         </div>

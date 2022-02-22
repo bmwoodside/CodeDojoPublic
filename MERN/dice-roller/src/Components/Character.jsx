@@ -9,7 +9,15 @@ const Character = props => {
         mass: "",
         hairColor: "",
         race: "",
-        alignment: ""
+        alignment: "",
+        characterStats: {
+            Strength: 0,
+            Dexterity: 0,
+            Constitution: 0,
+            Intelligence: 0,
+            Wisdom: 0,
+            Charisma: 0
+        }
     })
 
     // const rollD4 = () => Math.floor(Math.random() * 4) + 1;
@@ -25,6 +33,7 @@ const Character = props => {
     // let statRoller = rollD6() + rollD6() + rollD6();
 
     const rollStats = () => {
+
         let stats = {
             Strength: rollD6() + rollD6() + rollD6(),
             Dexterity: rollD6() + rollD6() + rollD6(),
@@ -34,25 +43,29 @@ const Character = props => {
             Charisma: rollD6() + rollD6() + rollD6()
         }
 
+        setCharacter({
+            ...character,
+            [character.characterStats]: stats
+        })
+
         return stats;
     };
 
-    const rerollStats = () => {
-        setStats(rollStats());
-    }
+    // const rerollStats = () => {
+    //     rollStats()
+    // }
 
     const keepStats = () => {
         // keep stats... store in state or something, then redirect.
+        // is this going to be handled in state or through a Database?
     }
-
-    const [stats, setStats] = useState(rollStats());
 
     
     return (
         <>
             <h1>{character.name}, placeholder</h1>
-            {console.log(stats)}
-            <button onClick={rerollStats}>Roll New Stats</button>
+            {console.log(character.characterStats)}
+            <button onClick={() => rollStats()}>Roll New Stats</button>
             <button onClick={keepStats}>Keep These Stats!</button>
         </>
     );

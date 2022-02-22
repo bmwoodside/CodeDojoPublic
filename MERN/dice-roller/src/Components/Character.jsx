@@ -34,7 +34,10 @@ const Character = props => {
 
     const rollStats = () => {
 
-        let stats = {
+        // why was this merging instead of updating the correct key object?
+        // reading discovered: is this a "soft merge"? WHY? it's state... always overwriting?
+        //let stats = {
+        let characterStats = {
             Strength: rollD6() + rollD6() + rollD6(),
             Dexterity: rollD6() + rollD6() + rollD6(),
             Constitution: rollD6() + rollD6() + rollD6(),
@@ -45,15 +48,13 @@ const Character = props => {
 
         setCharacter({
             ...character,
-            [character.characterStats]: stats
+            // [character.characterStats]: stats
+            characterStats
         })
 
-        return stats;
+        return characterStats;
+        // return stats
     };
-
-    // const rerollStats = () => {
-    //     rollStats()
-    // }
 
     const keepStats = () => {
         // keep stats... store in state or something, then redirect.
@@ -64,9 +65,18 @@ const Character = props => {
     return (
         <>
             <h1>{character.name}, placeholder</h1>
-            {console.log(character.characterStats)}
             <button onClick={() => rollStats()}>Roll New Stats</button>
-            <button onClick={keepStats}>Keep These Stats!</button>
+            <button onClick={() => keepStats()}>Keep These Stats!</button>
+
+            <div className='statsDisplay'>
+                <h1>Stats:</h1>
+                <p>Strength: {character.characterStats.Strength}</p>
+                <p>Dexterity: {character.characterStats.Dexterity}</p>
+                <p>Constitution: {character.characterStats.Constitution}</p>
+                <p>Intelligence: {character.characterStats.Intelligence}</p>
+                <p>Wisdom: {character.characterStats.Wisdom}</p>
+                <p>Charisma: {character.characterStats.Charisma}</p>
+            </div>
         </>
     );
 

@@ -36,7 +36,8 @@ const Character = props => {
 
         // why was this merging instead of updating the correct key object?
         // reading discovered: is this a "soft merge"? WHY? it's state... always overwriting?
-        //let stats = {
+
+        // let stats = {
         let characterStats = {
             Strength: rollD6() + rollD6() + rollD6(),
             Dexterity: rollD6() + rollD6() + rollD6(),
